@@ -341,6 +341,7 @@ $this->load->library('upload', $config);
           //loop from first data untill last data
          
          $markFor=$objWorksheet->getCellByColumnAndRow(1,1)->getValue();
+         //Below condition to restric user only to affect limited fields permistted below
          if ($markFor != 'internal1' || $markFor != 'internal2' || $markFor != 'other' || $markFor != 'external1' ||$markFor != 'external2')
              return;
          
